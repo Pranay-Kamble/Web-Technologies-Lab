@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.card-box {
+    display: flex;
+    border: 1px solid black;
+    height: 30em;
+    width: 75em;
+    box-shadow: 1em 1em 1em gainsboro;
+    background-color: cadetblue;
+}
+
+.product-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 30%; 
+}
+
+.product-img img {
+    height: 85%;
+    width: 85%;
+    object-fit: contain; 
+    margin-bottom: 10%; 
+}
+
+.product-content {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;       
+    padding-left: 10%;
+}
+
+.title { font-size: 2em; font-weight: bold; }
+.description { font-size: 1.25em; width: 80%; }
+.price { font-size: 1.5em; }
+
+.submit { width: 80%; }
+
+.btn-submit {
+    width: 100%;
+    padding: 10px; 
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    box-shadow: 1px 1px 2px;
+}
