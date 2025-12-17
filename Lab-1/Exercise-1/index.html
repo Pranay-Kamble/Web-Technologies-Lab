@@ -1,0 +1,91 @@
+<!-- Create a Student Marksheet Table 
+Design an HTML table that displays marks for five students. 
+The table must include: 
+•	Columns: Roll No, Name, Subject 1, Subject 2, Subject 3, Total • A header row using <thead> 
+•	Remaining rows in <tbody> 
+•	Use <th> tags for headings and <td> tags for data cells  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Marksheet</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Maths</th>
+                    <th>Science</th>
+                    <th>Computer Science</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>23BCE7303</td>
+                    <td>Pranay Kamble</td>
+                    <td>95</td>
+                    <td>99</td>
+                    <td>100</td>
+                    <td>294</td>
+                </tr>
+
+                <tr>
+                    <td>23BCE7317</td>
+                    <td>Shanmukh Malladi</td>
+                    <td>95</td>
+                    <td>95</td>
+                    <td>98</td>
+                    <td>288</td>
+                </tr>
+
+                <tr>
+                    <td>23BCE7824</td>
+                    <td>B Sai Siddharth</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>291</td>
+                </tr>
+
+                <tr>
+                    <td>23BCE7563</td>
+                    <td>Tarun Kumar</td>
+                    <td>95</td>
+                    <td>95</td>
+                    <td>98</td>
+                    <td>288</td>
+                </tr>
+
+                <tr>
+                    <td>23BCE7217</td>
+                    <td>Abhishek Chaudhary</td>
+                    <td>95</td>
+                    <td>97</td>
+                    <td>97</td>
+                    <td>289</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
