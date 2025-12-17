@@ -1,5 +1,5 @@
-.pdf
-.docx
+*.pdf
+*.docx
 .vscode
 .DS_Store
 
