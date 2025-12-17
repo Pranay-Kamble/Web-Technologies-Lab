@@ -1,0 +1,66 @@
+<!-- Exercise 3: HTML5 Form Elements 
+Create an Advanced Registration Form using HTML5 
+Create a user registration form that uses HTML5-specific input types. Include the following fields: 
+•	Full Name (text) 
+•	Email (email) 
+•	Date of Birth (date) 
+•	Phone Number (tel) 
+•	Password (password) 
+•	Choose Profile Picture (file) 
+•	Checkbox to accept Terms & Conditions 
+Use required validation wherever appropriate. 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Register</title>
+</head>
+<body>
+    <div id="box">
+        <h3><u>Registration Form</u></h3>
+        <form>
+            <div class="form-element">
+                <label for="full-name">Full Name: </label>
+                <input type="text" id="full-name" name="fullName" required>
+            </div>
+
+            <div class="form-element">
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+            </div>       
+
+            <div class="form-element">
+                <label for="dob">Date of Birth: </label>
+                <input type="date" id="dob" name="dob" required>
+            </div>          
+
+            <div class="form-element">
+                <label for="phone">Phone: </label>
+                <input type="number" id="phone" name="phone" pattern="^[6789]\d{9}$" required>
+            </div>
+            
+            <div class="form-element">
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-element">
+                <label for="profile-pic">Add profile picture: </label>
+                <input type="file" id="profile-pic" name="profilePic" accept="image/png, image/jpeg">
+            </div>
+
+            <div class="form-element">
+                <label for="terms">Accept Terms and Conditions: </label>
+                <input type="checkbox" id="terms" name="terms" required>
+            </div>
+
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+* {
+    font-family:'Tahoma', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#box {
+    border: 1px solid black;
+    display: inline-flex;
+    padding: 0.5em 1em 1em 2em;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.form-element {
+    margin: 0.25em
+}
+
+label {
+    font-weight: bold;
+}
