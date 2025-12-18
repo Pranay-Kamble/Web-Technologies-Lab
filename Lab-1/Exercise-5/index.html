@@ -1,0 +1,93 @@
+<!-- Exercise 5: Personal Portfolio Webpage (HTML + CSS) 
+Create a simple personal portfolio webpage using HTML and CSS. Your page must include: 
+•	A header with your name and a short tagline 
+•	An “About Me” section with a paragraph describing yourself 
+•	A “Skills” section using a list 
+•	A “Projects” section with at least two project titles 
+•	A footer with your email or contact details 
+Use CSS to: 
+•	Style the header with background color and centered text 
+•	Add spacing, fonts, and basic colors to each section 
+•	
+•	Arrange content cleanly using margins and padding -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <section id="img-section">
+            <div id="img-content">
+                <img src="profile-pic.png" alt="Profile Picture" id="profile-pic">
+            </div>
+        </section>
+        <section id="content-section">
+            <div class="content">
+                <div id="name">Pranay Kamble - Aspiring Backend Engineer</div>
+                <div id="tagline">Anything can be achieved with consistency and hardwork.</div>
+
+                <div id="about-me">
+                    <b>About Me: </b>
+                    <p>
+                    Hi, I’m Pranay Kamble. I started my journey as a C++ developer with a deep-seated interest in low-level logic and high-performance computing. <br>
+                    Today, I leverage that foundational understanding of 'how things work under the hood' to build scalable, modern backend systems.
+                    I’m currently focused on mastering the Spring Boot and Go ecosystems while diving deep into System Design and Microservices architecture. <br><br>
+                    With a background that spans from NoSQL databases (MongoDB, Redis) to Blockchain development and AWS Cloud Architecture, I enjoy bridging the gap between complex logic and user-facing reliability."
+                    </p>
+                </div>
+
+                <div id="projects">
+                    <b>Projects: </b>
+                    <ul>
+                        <li>
+                            <b>High-Performance C++ Logic:</b> Optimized system implementations and network protocol simulations focused on low-level performance.
+                        </li>
+                        <li>
+                            <b>Cloud-Native Backend: </b>Scalable Spring Boot and Go microservices integrated with Redis, MongoDB, and AWS infrastructure.
+                        </li>
+                        <li>
+                            <b>Enterprise Blockchain: </b>Decentralized asset tracking platforms developed using Hyperledger Fabric and Solidity (IBM Certified).
+                        </li>  
+                    </ul>
+                </div>
+
+                <div id="skills-list">
+                    <b>My Skills: </b>
+                    <ul>
+                        <li>Programming Languages: C/C++, Java, Python, NodeJS, GoLang</li>
+                        <li>Databases: SQL Databases, MongoDB, Redis</li>
+                        <li>Relevant Coursework: Database Management Systems, Operating Systems, Computer Networks, Software Engineering</li>
+                    </ul>
+                </div>
+
+                <div id="currently-learning">
+                    <b>Currently Learning: </b>
+                    <ul>
+                        <li>Microservices Architecture - RabbitMQ, ApacheKafka</li>
+                        <li>GoLang for Backend Architecture</li>
+                        <li>Python FastAPI</li>
+                        <li>Java Spring and Springboot</li>
+                        <li>AWS Solutions Architect Certification</li>
+                    </ul>
+                </div>
+
+                <div id="contact-me">
+                    <b>Contact Me: </b>
+                    <br>
+                    9004798799 <br>
+                    iampranaykamble1@gmail.com
+                    <br>
+                    <br>
+                    <a href="mailto:iampranaykamble1@gmail.com"><button class="normal-btn">Send Email</button></a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
