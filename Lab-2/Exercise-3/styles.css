@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    gap: 2em;
+}
+
+header {
+    padding: 2em;
+}
+
+main {
+    height: 60%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#task-input {
+    background-color:bisque;
+    height: 15vh;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px dotted black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board-column {
+    align-self: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    width: 33.33%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.board-column > header {
+    align-self: baseline;
+}
+
+#todo {
+    background-color: #ffebbb;
+    border-left: 1px solid black;
+}
+
+#in-progress {
+    background-color: #fdffcd;
+}
+
+#completed {
+    background-color: #e0ffcd;
+    border-right: 1px solid black;
+}
+
+#completed > .section-content > .task-element {
+    filter: brightness(70%);
+    text-decoration: line-through;  
+}
+
+#in-progress > .section-content > .task-element {
+    background-color: lawngreen;
+}
+
+.task-element {
+    width: 80%;
+    word-wrap: break-word;
+    min-height: 10%;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 10%;
+    background-color: white;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    background-color: azure;
+    flex-shrink: 0;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    gap: 2px;
+    width: 100%;
+    overflow: scroll;
+    filter: brightness(80%);
+}
+
+button {
+    height: 3em;
+    width: 10em;
+    font-weight: 500;
+}

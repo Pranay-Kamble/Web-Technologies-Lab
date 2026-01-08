@@ -1,0 +1,63 @@
+<!-- Exercise 3: Advanced Drag and Drop Task Manager
+Create a mini task board using HTML, CSS and JavaScript.
+The page must contain:
+• A text box to enter task name
+• An Add Task button
+• Three task columns:
+ To Do
+ In Progress
+ Completed
+When the Add Task button is clicked:
+• A new draggable task card must be created dynamically
+• The task card must display the task name and current date
+Using Drag &amp; Drop:
+• Tasks must be draggable between the three columns
+• When a task is dropped into Completed:
+ Change its background color
+ Display a message “Task Completed Successfully” -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise - 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task Board</h1>
+    </header>
+
+    <main>
+        <section id="todo" class="board-column" >
+            <header><h4>Todo</h4></header>
+            <section class="section-content" ondragover="dragOverHandler(event)" ondrop="onDropHandler(event)">
+            </section>
+            
+        </section>
+
+        <section id="in-progress" class="board-column">
+            <header><h4>In Progress</h4></header>
+            <section class="section-content" ondragover="dragOverHandler(event)" ondrop="onDropHandler(event)">
+            </section>
+        </section>
+
+        <section id="completed" class="board-column">
+            <header><h4>Completed</h4></header>
+            <section id='cheated-here' class="section-content" ondragover="dragOverHandler(event)" ondrop="onDropHandler(event)">
+            </section>
+        </section>
+
+    </main>
+
+    <div id="task-input">
+        <header style="padding-top: 1em; padding-bottom: 1em; font-weight: bold;">Add New Task</header>
+        <div>
+            <label for="task">Task: </label>
+            <input type="text" id="task-value" required>
+        </div> <br>
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
