@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* This ensures padding and borders are included in the element's total width/height calculation */
+}
+
+body{
+    background-color: beige;
+}
+
+main {
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#audio-element {
+    border: 1px solid black;
+    background-color: antiquewhite;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: max-content;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#video-element {
+    border: 1px solid black;
+    background-color: antiquewhite;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: max-content;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    width: 7em;
+    height: 2em;
+}
