@@ -1,0 +1,91 @@
+<!-- Exercise 5: Multi-Stage Client-Side Form Workflow Engine
+Scenario:
+Design a multi-step form with strict validation at each stage, where users 
+must complete each stage before moving on.
+Requirements:
+1.	Divide the form into four stages with different validation rules for each.
+2.	Use JavaScript to control navigation, ensuring users can only proceed if
+    all fields are valid.
+3.	Display progress dynamically using a progress bar.
+4.	Use DOM manipulation to show/hide stages based on user navigation.
+5.	Prevent navigation and form submission if any stage fails validation.
+6.	Store user input temporarily in JavaScript variables. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercise-5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <main>
+
+        <h2>Registration Form</h2>
+        <p id="step-indicator">Step 1 of 4</p>
+
+        <form id="work-form">
+
+            <div class="step-group active" data-step="1">
+                <h3>Step 1: Account</h3>
+
+                <label>Username (Min 4 chars)</label>
+                <input type="text" name="username"minlength="4" required >
+                <span class="error-msg"></span> <label>Password (Min 6 chars)</label>
+                <input type="password" name="password"minlength="6" required >
+                <span class="error-msg"></span>
+            </div>
+
+            <div class="step-group" data-step="2">
+                <h3>Step 2: Contact</h3>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+                <span class="error-msg"></span>
+
+                <label>Phone (10 digits)</label>
+                <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required >
+                <span class="error-msg"></span>
+            </div>
+
+            <div class="step-group" data-step="3">
+                <h3>Step 3: Details</h3>
+
+                <label>Role</label>
+                <select name="role" required>
+                    <option value="">Select one...</option>
+                    <option value="dev">Developer</option>
+                    <option value="mgr">Manager</option>
+                </select>
+                <span class="error-msg"></span>
+
+                <label style="margin-top: 20px;">
+                    <input type="checkbox" name="terms" required >
+                    I agree to terms
+                </label>
+                <span class="error-msg"></span>
+            </div>
+
+            <div class="step-group" data-step="4">
+                <h3>Step 4: Review</h3>
+                <div id="review-panel"></div>
+            </div>
+
+            <div class="controls">
+                <button type="button" id="btn-prev" disabled>Back</button>
+                <button type="button" id="btn-next">Next</button>
+                <button type="submit" id="btn-submit" class="hidden">Submit</button>
+            </div>
+
+        </form>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
