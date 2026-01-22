@@ -1,0 +1,67 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+#boxes{
+    height: 40%;
+    width: 100%;
+    display: flex;
+}
+
+#test-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+main{
+    display: flex;
+}
+h2 {
+    text-align: center;
+}
+
+main > section {
+    width: 50%;
+    height: 80vh;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+#log-display-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0px 20px 20px 20px;
+    overflow: auto;
+}
+
+
+#green-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
+    width: 50%;
+}
+
+#red-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    width: 50%;
+}
+
+button {
+    font-size: medium;
+}
+button:hover {
+    cursor:pointer;
+}
+
+button[id$='-button'] {
+    font-size:large
+}

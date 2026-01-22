@@ -1,0 +1,59 @@
+<!-- Exercise 4: Real-Time User Activity Monitor
+Scenario:
+Develop a system to monitor and log user activities (clicks, key presses, 
+focus changes) in real time.
+Requirements:
+1.	Track clicks, key presses, and focus events using event listeners.
+2.	Store each activity in an array of objects.
+3.	Use event bubbling and capturing to track both direct and propagated events.
+4.	Dynamically display the activity log using the DOM.
+5.	Set thresholds for suspicious activity (e.g., too many clicks) 
+    and trigger warnings.
+6.	Provide a button to reset and export the activity log as formatted text. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise-4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <main>
+        <section id="test-container">
+            <h2>Test Area</h2>
+            <section id="boxes">
+                <div id="green-div"><button id="green-button">Green Box Button</button></div>
+                <div id="red-div"><button id="red-button">Red Box Button</button></div>
+            </section>
+
+            <button>Button Outside Boxes</button>
+
+            <div id="input-box-container">
+                <label for="input-test">Input box:</label>
+                <input type="text" id="input-test">
+            </div>
+
+            <div id="list-items-container">
+                Test Event Propagation Here
+                <ul id="unordered-list-element">
+                    <li>El1</li>
+                    <li>El2</li>
+                    <li>El3</li>
+                    <li>El4</li>
+                <ul>
+            </div>
+        </section>
+
+        <section id="log-display-container">
+            <h2>Logs Display</h2>
+        </section>
+    </main>
+
+    <button id="reset-button">Reset Log History</button>
+    <button id="export-button">Export JSON to console</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
