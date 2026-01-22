@@ -1,0 +1,72 @@
+<!-- Exercise 1: Adaptive Registration System with Dynamic Validation Rules
+Scenario:
+You are building a user registration system where the validation rules change dynamically
+based on the user&#39;s selected role (Student, Teacher, or Admin). The system should adjust
+the validation accordingly.
+Requirements:
+1. Create a registration form with name, email, password, confirm password, age, role,
+and skills.
+2. Implement dynamic validation rules based on the selected role (e.g., stronger
+password requirements for admins).
+3. Use JavaScript to check email domain validity and validate password strength.
+4. Use functions to manage validation feedback dynamically.
+5. Manipulate the DOM to show/hide form fields and highlight invalid inputs in real-
+time.
+6. Prevent form submission until all validation rules are satisfied. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise - 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="registration-form">
+        <h2>Adaptive Registration Form</h2>
+        <div id="role-div">
+            <label class="side-heading">Role: </label>
+
+            <input type="radio" name="role" id="role-student" value="student" onclick="updateRole('student')">
+            <label for="role-student">Student</label>
+            
+            <input type="radio" name="role" id="role-teacher" value="teacher" onclick="updateRole('teacher')" required>
+            <label for="role-teacher">Teacher</label>
+
+            <input type="radio" name="role" id="role-admin" value="admin" onclick="updateRole('admin')">
+            <label for="role-admin">Admin</label>
+        </div>
+
+
+        <div id="name-div">
+            <label for="name" class="side-heading">Name: </label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div id="email-div">
+            <label for="email" class="side-heading">Email: </label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div id="password-div">
+            <label for="password" class="side-heading">Password: </label>
+            <input type="password" id="password" minlength="5" required>
+        </div>
+
+        <div id="confirm-password-div">
+            <label for="confirm-password" class="side-heading">Confirm Password: </label>
+            <input type="password" id="confirm-password" minlength="5" required>
+            <button>Show Password</button>
+        </div>
+
+        <div id="age-div">
+            <label for="age" class="side-heading">Age: </label>
+            <input type="number" id="age" min="1" max="120" required>
+        </div>
+
+        <div id="submit-div">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+    border: 1px solid black;
+    width: max-content;
+    padding: 0px 20px 0px 20px;
+}
+
+#submit-div {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+button[type='submit'] {
+    font-size: medium;
+}
+
+.side-heading {
+    font-weight: 1000;
+}
+
+.error-msg {
+    font-size:small;
+    color: red;
+}
