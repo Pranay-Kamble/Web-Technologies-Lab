@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.question-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.question-block {
+    margin-bottom: 10px;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+  margin-top: 5px;
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+button {
+  font-size: 12px;
+}
