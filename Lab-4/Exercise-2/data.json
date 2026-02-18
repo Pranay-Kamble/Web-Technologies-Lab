@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "ESP32-CAM Development Board", "price": 9.99, "category": "IoT Components" },
+  { "id": 2, "name": "Ultrasonic Sensor HC-SR04", "price": 3.50, "category": "Sensors" },
+  { "id": 3, "name": "Raspberry Pi 4 Model B", "price": 45.00, "category": "Microcontrollers" },
+  { "id": 4, "name": "AWS Certified Solutions Architect Study Guide", "price": 35.99, "category": "Books" },
+  { "id": 5, "name": "Go Programming Blueprints", "price": 28.50, "category": "Books" },
+  { "id": 6, "name": "PostgreSQL High Performance", "price": 42.00, "category": "Books" },
+  { "id": 7, "name": "PIR Motion Sensor", "price": 2.99, "category": "Sensors" },
+  { "id": 8, "name": "Docker Containerization Mastery", "price": 19.99, "category": "Books" },
+  { "id": 9, "name": "Keychron K2 Mechanical Keyboard", "price": 79.99, "category": "Peripherals" },
+  { "id": 10, "name": "Redis Crash Course", "price": 15.00, "category": "Books" }
+]

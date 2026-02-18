@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-2</title>
+
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #display-data {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <label for="search">Search here:</label>
+        <input type="text" id="search">
+    </div>
+
+    <div id="display-data">
+        <div id="table-data">
+            <h3>Results: </h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+
+        <div id="message-data">
+            <h3>No products found</h3>
+        </div>
+    </div>
+
+
+    <div id="all-data">
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
