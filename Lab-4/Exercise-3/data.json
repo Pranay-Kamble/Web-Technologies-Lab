@@ -1,0 +1,32 @@
+[
+  {
+    "id": "STU-1042",
+    "name": "Kaelen Voss",
+    "dept": "Cybersecurity",
+    "marks": "92.5"
+  },
+  {
+    "id": "STU-1043",
+    "name": "Lyra Vance",
+    "dept": "Data Science",
+    "marks": "88.0"
+  },
+  {
+    "id": "STU-1044",
+    "name": "Orion Pax",
+    "dept": "Robotics",
+    "marks": "95.5"
+  },
+  {
+    "id": "STU-1045",
+    "name": "Elara Quinn",
+    "dept": "Software Engineering",
+    "marks": "76.5"
+  },
+  {
+    "id": "STU-1046",
+    "name": "Tarek Thorne",
+    "dept": "Cloud Computing",
+    "marks": "84.0"
+  }
+]

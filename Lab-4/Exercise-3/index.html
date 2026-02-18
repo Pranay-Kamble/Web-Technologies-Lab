@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-3</title>
+    <style>
+        #display-data {
+            display: none;
+            margin-top: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="student-form">
+        <h3>Create Record</h3>
+        <div>
+            <label for="id">Student ID: </label>
+            <input type="text" id="id" required>
+        </div>
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="dept">Department: </label>
+            <input type="text" id="dept" required>
+        </div>
+        <div>
+            <label for="marks">Marks: </label>
+            <input type="number" min="0" max="100" step="0.5" id="marks" required>
+        </div>
+
+        <button id="create-btn">Create</button>
+    </form>
+
+    <div id="message"></div>
+
+    <div id="display-data">
+        <h4>All Data: </h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Marks</th>
+                    <th>Actions</th> </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
