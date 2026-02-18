@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-4</title>
+    <style>
+        #spinner { display: none; font-style: italic; color: gray; margin-top: 10px; }
+        #error-msg { display: none; color: red; margin-top: 10px; }
+        #display-data { display: none; margin-top: 20px; padding: 15px; border: 1px solid black; width: 200px; }
+    </style>
+</head>
+<body>
+    <label for="city">City Name: </label>
+    <input type="text" id="city">
+
+    <button id="search-btn">Submit</button>
+
+    <div id="spinner">Fetching live weather...</div>
+    <div id="error-msg"></div>
+    <div id="display-data"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
