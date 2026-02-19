@@ -1,26 +1,3 @@
-// Exercise 1: Employee Management System using Local XML
-// Scenario:
-// Create an Employee Management System that performs CRUD operations on employee data stored in a local XML file.
-// Requirements:
-// •	Create a local XML file employees.xml with fields:
-// o	Employee ID
-// o	Name
-// o	Department
-// o	Salary
-// •	Use AJAX to:
-// o	Fetch and display employee records in a table.
-// •	Parse XML response using:
-// o	responseXML
-// o	getElementsByTagName()
-// •	Implement CRUD operations:
-// o	Create → Add new employee node dynamically.
-// o	Read → Display all employees.
-// o	Update → Modify salary or department.
-// o	Delete → Remove employee node.
-// •	Use DOM manipulation to update UI dynamically.
-// •	Show proper success and error messages.
-// •	Handle empty XML or malformed XML errors.
-
 let timeOutId = 0;
 
 showStatus = (msg, status) => {
@@ -52,8 +29,6 @@ updateNode = (id) => {
         showStatus('Please enter positive value for salary', 400);
         return
     }
-
-
 
     td[2].textContent = dept
     td[3].textContent = salary
@@ -103,6 +78,10 @@ load = () => {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const data = xhr.responseXML
+            if (data.length === 0) {
+                    showStatus("XML is empty. No records found.", 404);
+                    return;
+                }
             updateUI(data)
             showStatus("Fetch Successful",200);
         }else if (xhr.readyState === 4){
