@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Pranay Kamble",
+    "course": "Computer Science",
+    "marks": 85
+  },
+  {
+    "id": 2,
+    "name": "Aditi Sharma",
+    "course": "Information Technology",
+    "marks": 92
+  },
+  {
+    "id": 3,
+    "name": "Rahul Verma",
+    "course": "Electronics",
+    "marks": 78
+  },
+  {
+    "id": 4,
+    "name": "Sneha Reddy",
+    "course": "Mechanical Engineering",
+    "marks": 88
+  },
+  {
+    "id": 5,
+    "name": "Arjun Patel",
+    "course": "Data Science",
+    "marks": 95
+  }
+]

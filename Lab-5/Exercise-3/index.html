@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-3</title>
+
+    <style>
+        .display-none {
+            display: none;
+        }
+
+        .display-block {
+            display: block;
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 10px;
+            width: max-content;
+        }
+
+        #status-message {
+            border: 1px dotted black;
+            margin: 20px 0;
+            padding: 10px;
+            width: max-content;
+            font-weight: bold;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 5px;
+        }
+
+        button {
+            height: 25px;
+            width: max-content;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="student-form">
+        <h3>Add New Student</h3>
+        <div>
+            <label for="id">Student ID: </label>
+            <input type="text" id="id" required>
+        </div>
+
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div>
+            <label for="course">Course: </label>
+            <input type="text" id="course" required>
+        </div>
+
+        <div>
+            <label for="marks">Marks: </label>
+            <input type="number" id="marks" min="0" max="100" required>
+        </div>
+
+        <br>
+            <button id="submit">Create</button>
+    </form>
+
+    <br>
+    <button id="view">View All</button>
+
+    <div id="status-message" class="display-none"></div>
+
+    <div id="display" class="display-none">
+        <h3>Student Records</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
