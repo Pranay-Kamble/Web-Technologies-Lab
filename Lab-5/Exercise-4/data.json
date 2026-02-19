@@ -1,0 +1,37 @@
+[
+  {
+    "id": 101,
+    "name": "Wireless Mouse",
+    "category": "Electronics",
+    "price": 599.00,
+    "stock": 150
+  },
+  {
+    "id": 102,
+    "name": "Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 1499.00,
+    "stock": 80
+  },
+  {
+    "id": 103,
+    "name": "Notebook A5",
+    "category": "Stationery",
+    "price": 49.00,
+    "stock": 300
+  },
+  {
+    "id": 104,
+    "name": "Water Bottle 1L",
+    "category": "Home & Kitchen",
+    "price": 199.00,
+    "stock": 120
+  },
+  {
+    "id": 105,
+    "name": "USB-C Cable",
+    "category": "Accessories",
+    "price": 299.00,
+    "stock": 200
+  }
+]
