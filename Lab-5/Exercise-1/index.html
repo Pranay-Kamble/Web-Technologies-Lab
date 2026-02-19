@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-1</title>
+
+    <style>
+        .display-none {
+            display: none;
+        }
+
+        .display-block {
+            display: block;
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 10px;
+            width: max-content;
+        }
+
+        #status-message {
+            border: 1px dotted black;
+            margin: 20px;
+            padding: 10px;
+            width: max-content;
+        }
+        table,
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+        }
+
+        button {
+            height: 20px;
+            width: 100px;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <div>
+            <label for="id">ID: </label>
+            <input type="text" id="id" required>
+        </div>
+
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" required>
+        </div>
+
+        <div>
+            <label for="dept">Department: </label>
+            <input type="text" id="dept" required>
+        </div>
+
+        <div>
+            <label for="salary">Salary: </label>
+            <input type="number" id="salary" required>
+        </div>
+
+        <button id="submit">Create</button>
+    </form>
+
+    <br>
+    <button id="view">View All</button>
+
+    <div id="display" class="display-none">
+        <h3>Employee Data</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="status-message" class="display-none"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

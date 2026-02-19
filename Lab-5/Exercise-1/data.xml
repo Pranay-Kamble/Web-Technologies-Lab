@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    
+    <employee>
+        <id>1000001</id>
+        <name>Arjun Mehta</name>
+        <department>Engineering</department>
+        <salary>850000</salary>
+    </employee>
+    
+    <employee>
+        <id>1000002</id>
+        <name>Priya Nair</name>
+        <department>Human Resources</department>
+        <salary>620000</salary>
+    </employee>
+    
+    <employee>
+        <id>1000003</id>
+        <name>Rohit Sharma</name>
+        <department>Finance</department>
+        <salary>780000</salary>
+    </employee>
+    
+    <employee>
+        <id>1000004</id>
+        <name>Sneha Reddy</name>
+        <department>Marketing</department>
+        <salary>690000</salary>
+    </employee>
+    
+    <employee>
+        <id>1000005</id>
+        <name>Karthik Iyer</name>
+        <department>Product</department>
+        <salary>910000</salary>
+    </employee>
+
+</employees>
