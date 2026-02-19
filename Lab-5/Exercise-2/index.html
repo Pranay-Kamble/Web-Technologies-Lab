@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercise-2</title>
+
+    <style>
+        .display-none { display: none; }
+        .display-block { display: block; }
+
+        form {
+            border: 1px solid black;
+            padding: 10px;
+            width: max-content;
+        }
+
+        #status-message {
+            border: 1px dotted black;
+            margin: 20px;
+            padding: 10px;
+            width: max-content;
+            font-weight: bold;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+        }
+
+        button {
+            height: 25px;
+            width: 100px;
+            background-color: azure;
+            cursor: pointer;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="book-form">
+        <h3>Add New Book</h3>
+        <div>
+            <label for="id">Book ID: </label>
+            <input type="text" id="id" required>
+        </div>
+
+        <div>
+            <label for="title">Title: </label>
+            <input type="text" id="title" required>
+        </div>
+
+        <div>
+            <label for="author">Author: </label>
+            <input type="text" id="author" required>
+        </div>
+
+        <div>
+            <label for="status">Status: </label>
+            <select id="status">
+                <option value="Available">Available</option>
+                <option value="Borrowed">Borrowed</option>
+            </select>
+        </div>
+        <br>
+        <button id="submit">Create</button>
+    </form>
+
+    <br>
+    <button id="view">View All</button>
+
+    <div id="display" class="display-none">
+        <h3>Library Book Data</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Availability</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <div id="status-message" class="display-none"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

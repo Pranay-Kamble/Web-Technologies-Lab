@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <id>B-101</id>
+        <title>The Pragmatic Programmer</title>
+        <author>Andrew Hunt</author>
+        <status>Available</status>
+    </book>
+    <book>
+        <id>B-102</id>
+        <title>Clean Code</title>
+        <author>Robert C. Martin</author>
+        <status>Borrowed</status>
+    </book>
+</library>
