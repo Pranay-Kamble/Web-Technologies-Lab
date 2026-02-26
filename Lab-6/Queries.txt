@@ -1,0 +1,316 @@
+Ques-1: 
+
+    1. Create a database called ‘vehicles’ and write a MongoDB query to select database as
+    “vehicles”.
+
+    use vehicle
+
+
+    2. Write a MongoDB query to display all the databases.
+
+    show dbs
+
+    3. Create a collection called ‘two_wheelers’. (use capping) and Create a collection called
+    ‘four_wheelers’.
+
+    db.createCollection("two_wheelers", {capped: true, size: 1048576})
+    db.createCollection("four_wheelers", {capped: true, size: 1048576})
+
+    4. Add 5 two-wheeler details to the collection named ‘two_wheelers’. Each document
+    consists of following fields as bike_name, model (gear or gearless), category (100cc,
+    125cc, 150cc, 200cc), colors_available (red, black, blue, sport red etc) as array,
+    manufacturer, performance (out of 10), timestamp (date and year release) and
+    price.
+
+    db.two_wheelers.insertMany(
+        [
+            {
+                bike_name : "Royal Enfield Classic",
+                model : "Gear",
+                category: "150cc",
+                colors_available: ["red","blue"],
+                manufacturer : "Royal Enfield",
+                performance : 9,
+                timestamp: new Date("2020-10-01"),
+                price : 199999 
+            },
+            {
+                bike_name : "Activa 5G",
+                model : "Gearless",
+                category: "100cc",
+                colors_available: ["red","blue","black","white"],
+                manufacturer : "Hero",
+                performance : 8,
+                timestamp: new Date("2019-09-17"),
+                price : 99999 
+            },
+            {
+                bike_name : "Splendor Classic",
+                model : "Gear",
+                category: "150cc",
+                colors_available: ["blue"],
+                manufacturer : "Hero",
+                performance : 8,
+                timestamp: new Date("2010-01-23"),
+                price : 79999
+            },
+            {
+                bike_name : "Pulsar",
+                model : "Gear",
+                category: "200cc",
+                colors_available: ["red","blue"],
+                manufacturer : "Suzuki",
+                performance : 10,
+                timestamp: new Date("2020-03-03"),
+                price : 199999 
+            },
+            {
+                bike_name : "Jupiter",
+                model : "Gearless",
+                category: "120cc",
+                colors_available: ["brown", "red", "black"],
+                manufacturer : "TVS",
+                performance : 8,
+                timestamp: new Date("2019-04-10"),
+                price : 199999 
+            }
+        ]
+    )
+
+    5. Add 5 four-wheeler details to the collection named ‘four_wheelers’. Each document
+    consists of following fields as vehicle_name, model (commercial or own), category
+    (car, lorry, bus, mini truck, heavy truck, containers), variants (vxi, zxi, petrol, diesel
+    etc) as array, manufacturer, performance (out of 10), timestamp (date and year
+    release) and price.
+
+
+        db.four_wheelers.insertMany([
+            {
+                vehicle_name: 'Car1',
+                model: 'commercial',
+                category: 'car',
+                variant: [ 'vxi', 'diesel', 'petrol' ],
+                manufacturer: 'Man1',
+                performance: 8,
+                timestamp: ISODate('2025-10-10'),
+                price: 2500000
+            },
+            {
+                vehicle_name: 'Car2',
+                model: 'own',
+                category: 'car',
+                variant: [ 'vxi', 'diesel', 'petrol' ],
+                manufacturer: 'Man2',
+                performance: 7,
+                timestamp: ISODate('2025-05-10'),
+                price: 2200000
+            },
+            {
+                vehicle_name: 'Car3',
+                model: 'commercial',
+                category: 'car',
+                variant: [ 'water', 'diesel', 'petrol' ],
+                manufacturer: 'Man3',
+                performance: 10,
+                timestamp: ISODate('2025-12-10'),
+                price: 3000000
+            },
+            {
+                vehicle_name: 'Car4',
+                model: 'commercial',
+                category: 'car',
+                variant: [ 'water', 'diesel', 'petrol' ],
+                manufacturer: 'Man4',
+                performance: 10,
+                timestamp: ISODate('2025-12-20'),
+                price: 3000000
+            },
+            {
+                vehicle_name: 'Car5',
+                model: 'commercial',
+                category: 'car',
+                variant: [ 'water', 'diesel', 'petrol' ],
+                manufacturer: 'Man5',
+                performance: 10,
+                timestamp: ISODate('2025-05-10'),
+                price: 3000000
+            }
+        ]
+    )
+
+
+
+    6. Write a MongoDB query to display all documents available in two_wheelers and
+    four_wheelers.
+
+        db.two_wheelers.find()
+        db.four_wheelers.find()
+
+    7. Write a MongoDB query to display only vehicle name and price in all the collection of
+    the database
+
+        db.two_wheelers.find({}, {bike_name:1, price:1, _id: 0})
+        db.four_wheelers.find({}, {vehicle_name:1, price:1, _id: 0})
+
+    8. Write a MongoDB query to display two_wheelers from a particular company
+
+        db.two_wheelers.find({manufacturer: "Hero"}, {})
+
+    9. Write a MongoDB query to display four_wheelers available in diesel variants
+
+        db.four_wheelers.find({variant: {$in: ["diesel"]}}, {})
+
+    10. Write a MongoDB query to display vehicles name, category and manufacturer details
+    whose rating is more than 5.
+
+        db.two_wheelers.find({performance: {$gt: 5}}, {bike_name:1, category:1, manufacturer: 1, _id: 0})
+        db.four_wheelers.find({performance: {$gt: 5}}, {vehicle_name:1, category: 1, manufacturer: 1, _id: 0})
+
+
+Ques-2
+
+    1. Create a database called ‘animal’ and write a MongoDB query to select database as
+    ‘animal’.
+
+        use animal
+
+    2. Write a MongoDB query to display all the databases.
+        show dbs
+
+    3. Create a collection called ‘wild_animals’.(use capping) and Create a collection called
+    ‘domestic_animals’.
+
+        db.createCollection("wild_animals", {capped: true, size: 1048576})
+        db.createCollection("domestic_animals", {capped: true, size: 1048576})
+
+    4. Add 5 wild_animal details to the collection named ‘wild_animals’. Each document
+    consists of following fields as animal_name, nature (harm or harmless),
+    favorite_foods (meat, rabbits, deer etc) as array, care_taker_name, life span (in
+    years), timestamp (when the animal registered at the Zoo) and expenses.
+
+        db.wild_animal.insertMany(
+            [
+                {
+                    animal_name: 'Lion',
+                    nature: 'harm',
+                    favorite_foods: [ 'deer', 'rabbits', 'buffaloes' ],
+                    care_taker: 'C1',
+                    lifespan: 20,
+                    timestamp: new Date('2020-01-01'),
+                    expenses: 120
+                },
+                {
+                    animal_name: 'Hyena',
+                    nature: 'harm',
+                    favorite_foods: [ 'rabbits' ],
+                    care_taker: 'C2',
+                    lifespan: 10,
+                    timestamp: new Date('2023-12-15'),
+                    expenses: 100
+                },
+                {
+                    animal_name: 'Elephant',
+                    nature: 'harmless',
+                    favorite_foods: [ 'coconuts', 'leaves' ],
+                    care_taker: 'C3',
+                    lifespan: 5,
+                    timestamp: new Date('2025-10-01'),
+                    expenses: 20
+                },
+                {
+                    animal_name: 'Tiger',
+                    nature: 'harm',
+                    favorite_foods: [ 'deer', 'bison', 'chicken' ],
+                    care_taker: 'C4',
+                    lifespan: 10,
+                    timestamp: new Date('2025-03-11'),
+                    expenses: 20
+                },
+                {
+                    animal_name: 'Deer',
+                    nature: 'harmless',
+                    favorite_foods: [ 'grass', 'leaves' ],
+                    care_taker: 'C1',
+                    lifespan: 5,
+                    timestamp: new Date('2025-10-01'),
+                    expenses: 20
+                }
+            ]
+        )
+
+    5. Add 5 domestic-animal details to the collection named ‘domestic_animals’. Each
+    document consists of following fields as animal_name, gender (male or female),
+    favorite_foods (meat, rabbits, deer etc) as array, animal_petname, life span (in
+    years), timestamp (when the animal registered at the Zoo) and expenses.
+
+
+        db.domestic_animal.insertMany(
+            [
+                {
+                    animal_name: 'Dog',
+                    nature: 'harmless',
+                    favorite_foods: [ 'cookies', 'milk', 'meat' ],
+                    care_taker: 'D1',
+                    lifespan: 20,
+                    timestamp: new Date('2025-12-14'),
+                },
+                {
+                    animal_name: 'Cat',
+                    nature: 'harmless',
+                    favorite_foods: [ 'meat', 'milk' ],
+                    care_taker: 'D2',
+                    lifespan: 20,
+                    timestamp: new Date('2025-12-15'),
+                    expenses: 100
+                },
+                {
+                    animal_name: 'Parrot',
+                    nature: 'harmless',
+                    favorite_foods: [ 'nuts', 'leaves' ],
+                    care_taker: 'D3',
+                    lifespan: 10,
+                    timestamp: new Date('2025-10-01'),
+                    expenses: 20
+                },
+                {
+                    animal_name: 'Snake',
+                    nature: 'harm',
+                    favorite_foods: [ 'eggs', 'rats' ],
+                    care_taker: 'D4',
+                    lifespan: 4,
+                    timestamp: new Date('2025-12-01'),
+                    expenses: 25
+                },
+                {
+                    animal_name: 'Hamster',
+                    nature: 'harmless',
+                    favorite_foods: [ 'nuts', 'leaves' ],
+                    care_taker: 'D2',
+                    lifespan: 2,
+                    timestamp: new Date('2025-04-11'),
+                    expenses: 20
+                }
+            ]
+        )
+
+    6. Write a MongoDB query to display all documents available in wild_animals and
+    domastic_animals.
+        db.wild_animal.find()
+        db.domestic_animal.find()
+
+    7. Write a MongoDB query to display only animal name and expenses in all the
+    collection of the database
+        db.wild_animal.find({}, {_id: 0, animal_name: 1, expenses: 1})
+        db.domestic_animal.find({}, {_id: 0, animal_name: 1, expenses: 1})
+
+    8. Write a MongoDB query to display domestic_animals whose life is a particular year
+        db.domestic_animal.find({lifespan:20})
+
+    9. Write a MongoDB query to display wild_animals available under a particular
+    care_taker
+        db.wild_animal.find({care_taker: 'C1'})
+
+    10. Write a MongoDB query to display animal name, favorite_foods and expenses details
+    whose lifespan is more than 5 years.
+        db.wild_animal.find({lifespan: {$gt: 5}}, {_id:0, animal_name: 1, favorite_foods: 1, expenses: 1})
+        db.domestic_animal.find({lifespan: {$gt: 5}}, {_id:0, animal_name: 1, favorite_foods: 1, expenses: 1})
