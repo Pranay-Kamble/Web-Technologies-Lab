@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Finder</title>
+    <style>
+        #controls {
+            border: 1px solid black;
+            padding: 5px;
+            width: 500px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 2px;
+        }
+
+        th {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="controls">
+        <input type="text" id="search-input" placeholder="Search Title...">
+        <button onclick="fetchBooks('/books/search?title=' + document.getElementById('search-input').value)">Search</button>
+        <hr>
+
+        <input type="text" id="cat-input" placeholder="Category (e.g. Programming)">
+        <button onclick="fetchBooks('/books/category/' + document.getElementById('cat-input').value)">Filter</button>
+        <hr>
+
+        <button onclick="fetchBooks('/books/sort/price')">Sort by Price</button>
+        <button onclick="fetchBooks('/books/sort/rating')">Sort by Rating</button>
+        <button onclick="fetchBooks('/books/top')">Top Rated (>= 4.0)</button>
+        <hr>
+
+        <button onclick="changePage(-1)">Previous Page</button>
+        <span id="page-num" style="font-weight: bold;">Page 1</span>
+        <button onclick="changePage(1)">Next Page</button>
+    </div>
+
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="book-data"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
