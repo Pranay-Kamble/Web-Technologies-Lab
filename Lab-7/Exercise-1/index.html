@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Manager</title>
+    <style>
+        body { font-family: Tahoma; padding: 20px; }
+        .note { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+        input, button { margin: 5px 0; padding: 5px; }
+    </style>
+</head>
+<body>
+
+    <h3>Add Note</h3>
+    <input type="text" id="title" placeholder="Title"><br>
+    <input type="text" id="subject" placeholder="Subject"><br>
+    <input type="text" id="desc" placeholder="Description"><br>
+    <button onclick="addNote()">Save Note</button>
+
+    <h3>All Notes</h3>
+    <div id="notes-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
